@@ -9,7 +9,7 @@
         "start": "webpack server --env mode=dev --config ./webpack.config.dev.js"
     },
     "keywords": [],
-    "author": "Tim Konieczny",
+    "author": "Le Van Pon",
     "repository": {
         "type": "git",
         "url": ""
