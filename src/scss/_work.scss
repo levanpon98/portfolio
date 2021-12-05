@@ -1,0 +1,153 @@
+#work-wrapper {
+    display: flex;
+    flex-direction: column;
+    max-width: none;
+    width: 90%;
+    height: 90%;
+    #work-content {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        .intro {
+            margin: 0 0 1em 0;
+            text-align: justify;
+            @media #{$l} {
+                font-size: 0.7em;
+            }
+        }
+        #grid {
+            width: 100%;
+            overflow: auto;
+            flex: 1;
+            display: grid;
+            grid-template-rows: 1fr 1fr;
+            grid-auto-columns: 25em;
+            grid-auto-flow: column;
+            grid-gap: 0.5em;
+            padding: 0 0 0.5em 0;
+            @media #{$l} {
+                grid-auto-columns: 20em;
+            }
+            .cell:hover {
+                .background {
+                    &.main {
+                        opacity: 0;
+                    }
+                }
+                .content {
+                    & {
+                        opacity: 1;
+                        h3 {
+                            margin-top: 0;
+                        }
+                    }
+                }
+            }
+            .cell {
+                position: relative;
+                border-radius: 0.5em;
+                overflow: hidden;
+                .background {
+                    position: absolute;
+                    background-size: cover;
+                    background-position: center center;
+                    background-color: $color-background-secondary;
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    &.meta {
+                        background: linear-gradient(-45deg, black, $color-background-secondary);
+                    }
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                    }
+                    &.main {
+                        transition: opacity 0.5s;
+                        opacity: 1;
+                        z-index: 1;
+                        @media (hover: none) {
+                            opacity: 0;
+                        }
+                    }
+                    p {
+                        font-size: 2.5em;
+                        font-family: "DM Mono", monospace;
+                    }
+                }
+                .content {
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    background-color: rgba(0, 0, 0, 0.7);
+                    opacity: 0;
+                    transition: opacity 0.5s;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    overflow: hidden;
+                    box-sizing: border-box;
+                    padding: 0 2em;
+                    z-index: 2;
+                    @media (hover: none) {
+                        opacity: 1;
+                    }
+                    & > * {
+                        margin: 0;
+                    }
+                    h3 {
+                        transition: margin 0.5s;
+                        margin: 2em 0 0.5em 0;
+                        text-align: center;
+                        @media (hover: none) {
+                            margin: 0 0 0.5em 0;
+                        }
+                    }
+                    p {
+                        font-size: 0.8em;
+                        text-align: center;
+                        hyphens: auto;
+                        &.description {
+                            line-height: 2em;
+                            @media #{$l} {
+                                line-height: normal;
+                            }
+                        }
+                    }
+                    p,
+                    a {
+                        margin: 0.7em 0;
+                        svg {
+                            margin-left: 0;
+                        }
+                    }
+                    .tags {
+                        text-align: center;
+                        .tag {
+                            font-size: 0.9em;
+                            margin: 0.5em;
+                        }
+                    }
+                }
+                &.large {
+                    grid-row-start: 1;
+                    grid-row-end: 3;
+                }
+                &:last-child {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    .message-buttons {
+                        display: flex;
+                        flex-direction: column;
+                    }
+                }
+            }
+        }
+    }
+}

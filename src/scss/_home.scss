@@ -1,0 +1,12 @@
+#home-wrapper {
+    visibility: visible;
+    overflow: auto;
+    #subtitle {
+        margin: 1em 0;
+        display: inline-block;
+        .tag {
+            font-size: 0.9em;
+            margin: 0 0.8em 0.8em 0;
+        }
+    }
+}
