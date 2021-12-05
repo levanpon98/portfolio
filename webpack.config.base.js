@@ -103,7 +103,7 @@ module.exports = {
             imageHeight: "715",
             imageAlt: description,
             url: url,
-            twitter: "@timkonieczny",
+            twitter: "",
             twitterCard: "summary_large_image",
             meta: {
                 viewport: "width=device-width, height=device-height, initial-scale=1, maximum-scale=1, user-scalable=no"
