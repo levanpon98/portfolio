@@ -77,7 +77,7 @@ module.exports = {
             patterns: [
                 // { from: 'src/php/credentials.php' },
                 { from: 'src/.htaccess' },
-                { from: 'assets/card.png' },
+                // { from: 'assets/card.png' },
                 { from: 'src/sitemap.xml' }
             ]
         }),
@@ -97,7 +97,7 @@ module.exports = {
             type: "website",
             locale: "en_US",
             description: description,
-            image: `${url}card.png`,
+            // image: `${url}card.png`,
             imageType: "image/png",
             imageWidth: "1366",
             imageHeight: "715",
