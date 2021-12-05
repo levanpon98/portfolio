@@ -14,18 +14,18 @@ class MessageButtons extends Component {
                     {home.message}
                 </Link>
                 <span>
-                    <a className="icon-button animated" href="#"
+                    <a className="icon-button animated" href="https://github.com/levanpon98"
                         target="_blank" rel="noopener noreferrer">
                         <FontAwesomeIcon icon={faGithub} />
                     </a>
-                    <a className="icon-button animated" href="#"
+                    <a className="icon-button animated" href="https://www.facebook.com/levanpon12/"
                         target="_blank" rel="noopener noreferrer">
                         <FontAwesomeIcon icon={faFacebook} />
                     </a>
-                    <a className="icon-button animated" href="#"
+                    {/* <a className="icon-button animated" href="#"
                         target="_blank" rel="noopener noreferrer">
                         <FontAwesomeIcon icon={faTwitter} />
-                    </a>
+                    </a> */}
                 </span>
             </div>
         )
